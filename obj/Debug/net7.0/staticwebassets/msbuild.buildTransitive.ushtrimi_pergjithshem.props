@@ -1,0 +1,3 @@
+﻿<Project>
+  <Import Project="..\buildMultiTargeting\ushtrimi_pergjithshem.props" />
+</Project>

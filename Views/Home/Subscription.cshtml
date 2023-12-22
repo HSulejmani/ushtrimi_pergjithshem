@@ -1,0 +1,23 @@
+@model List<Subscription>
+
+<h2>Subscriptions List</h2>
+
+<table>
+    <thead>
+        <tr>
+            <th>Subscription Id</th>
+            <th>Person Id</th>
+            <th>Magazine Id</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var subscription in Model)
+        {
+            <tr>
+                <td>@subscription.SubscriptionId</td>
+                <td>@subscription.PersonId</td>
+                <td>@subscription.MagazineId</td>
+            </tr>
+        }
+    </tbody>
+</table>

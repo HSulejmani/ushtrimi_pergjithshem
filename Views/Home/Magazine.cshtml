@@ -1,0 +1,25 @@
+@model List<Magazine>
+
+<h2>Magazines List</h2>
+
+<table>
+    <thead>
+        <tr>
+            <th>Magazine Id</th>
+            <th>Title</th>
+            <th>Action</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var magazine in Model)
+        {
+            <tr>
+                <td>@magazine.MagazineId</td>
+                <td>@magazine.Title</td>
+                <td><a asp-action="DeleteMagazine" asp-route-id="@magazine.MagazineId">Delete</a></td>
+            </tr>
+        }
+    </tbody>
+</table>
+
+<a asp-action="RegisterMagazine">Add a Magazine</a>
